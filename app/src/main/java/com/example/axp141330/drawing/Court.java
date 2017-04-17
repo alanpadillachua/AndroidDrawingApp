@@ -18,12 +18,12 @@ public class Court extends View {
 
 
         int width = context.getResources().getDisplayMetrics().widthPixels;
-        int height = context.getResources().getDisplayMetrics().widthPixels;
+        int height = context.getResources().getDisplayMetrics().heightPixels;
         int x = height/2;
         int y = 0;
         rectangle = new ShapeDrawable(new RectShape());
         rectangle.getPaint().setColor(0xff74AC23);
-        rectangle.setBounds(x, y, x + width, y + height);
+        rectangle.setBounds(x, y, x + height, y + width);
     }
 
 
