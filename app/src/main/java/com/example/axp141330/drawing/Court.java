@@ -39,7 +39,7 @@ public class Court extends View {
         paintDrawer = new Paint(); // paint
         paintDrawer.setColor(PinkColor);
         paintDrawer.setAntiAlias(true);
-        paintDrawer.setStrokeWidth(20);
+        paintDrawer.setStrokeWidth(3);
         paintDrawer.setStyle(Paint.Style.STROKE);
         paintDrawer.setStrokeJoin(Paint.Join.ROUND);
         paintDrawer.setStrokeCap(Paint.Cap.ROUND);
@@ -87,5 +87,9 @@ public class Court extends View {
     * **/
     public void setNewColor(int color) {
         paintDrawer.setColor(color);
+    }
+    // Used to change the size of the paint brush
+    public void updateSize(float size){
+        paintDrawer.setStrokeWidth(size);
     }
 }
