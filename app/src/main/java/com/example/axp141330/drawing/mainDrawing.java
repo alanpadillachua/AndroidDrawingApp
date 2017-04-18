@@ -10,25 +10,16 @@ import android.widget.Toast;
 
 public class mainDrawing extends AppCompatActivity {
     public Court paintCourt;
-    private RadioButton orange;
-    private RadioButton purple;
-    private RadioButton pink;
-    private RadioButton green;
     private RadioGroup colorChoiceButton;
-    private int buttonColor;
     private final int OrangeColor = Color.parseColor("#ff9400");
     private final int PurpleColor = Color.parseColor("#a100c1");
     private final int PinkColor = Color.parseColor("#ff0098");
-    private final int greenColor = Color.parseColor("#05aa00");
+    private final int GreenColor = Color.parseColor("#05aa00");
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_drawing);
         paintCourt = (Court)findViewById(R.id.courtDraw);
-        orange = (RadioButton)findViewById(R.id.OrangeButton); // get orange button
-        purple = (RadioButton)findViewById(R.id.PurpleButton); // get purple button
-        green = (RadioButton)findViewById(R.id.GreenButton); // get green button
-        pink = (RadioButton)findViewById(R.id.PinkButton); // get pink button
         colorChoiceButton = (RadioGroup) findViewById(R.id.colorButtons);
         colorChoiceButton.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
@@ -37,19 +28,16 @@ public class mainDrawing extends AppCompatActivity {
                 switch(checkedId)
                 {
                     case R.id.OrangeButton:
-                        buttonColor = OrangeColor;
+                      paintCourt.setNewColor(OrangeColor); // set the new color
                         break;
                     case R.id.PurpleButton:
-                        buttonColor = PurpleColor;
-                        // TODO Something
+                        paintCourt.setNewColor(PurpleColor); // set the new color
                         break;
                     case R.id.GreenButton:
-                        buttonColor = greenColor;
-                        // TODO Something
+                        paintCourt.setNewColor(GreenColor); // set the new color
                         break;
                     case R.id.PinkButton:
-                        buttonColor = PinkColor;
-                        // TODO Something
+                        paintCourt.setNewColor(PinkColor); // set the new color
                         break;
                 }
             }
