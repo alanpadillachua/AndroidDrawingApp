@@ -24,7 +24,7 @@ public class mainDrawing extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_drawing);
-        paintCourt = (Court)findViewById(R.id.courtDraw);
+        /*paintCourt = (Court)findViewById(R.id.courtDraw);
         orange = (RadioButton)findViewById(R.id.OrangeButton); // get orange button
         purple = (RadioButton)findViewById(R.id.PurpleButton); // get purple button
         green = (RadioButton)findViewById(R.id.GreenButton); // get green button
@@ -55,7 +55,7 @@ public class mainDrawing extends AppCompatActivity {
             }
         });
         //intially setting red paint
-        colorChoiceButton.check(R.id.PinkButton);
+        colorChoiceButton.check(R.id.PinkButton);*/
 
 
     }

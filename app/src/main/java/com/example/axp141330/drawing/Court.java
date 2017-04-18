@@ -40,14 +40,44 @@ public class Court extends View {
         int x = 0; // set x start of screen 0
         int y = 0; // y will be the height - width
         rectangle = new ShapeDrawable(new RectShape()); // initialize a rectangle
-        rectangle.getPaint().setColor(Color.BLACK); // set the color
+        rectangle.getPaint().setColor(Color.DKGRAY); // set the color
         rectangle.setBounds(x, y, width, height); // make it be on bottom half of screen
         circle = new ShapeDrawable(new OvalShape());
         circle.setIntrinsicWidth(width);
 
+       /* orange = (RadioButton)findViewById(R.id.OrangeButton); // get orange button
+        purple = (RadioButton)findViewById(R.id.PurpleButton); // get purple button
+        green = (RadioButton)findViewById(R.id.GreenButton); // get green button
+        pink = (RadioButton)findViewById(R.id.PinkButton); // get pink button
+        colorChoiceButton = (RadioGroup) findViewById(R.id.colorButtons);
+        colorChoiceButton.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId)
+            {
+                switch(checkedId)
+                {
+                    case R.id.OrangeButton:
+                        buttonColor = OrangeColor;
+                        break;
+                    case R.id.PurpleButton:
+                        buttonColor = PurpleColor;
+                        // TODO Something
+                        break;
+                    case R.id.GreenButton:
+                        buttonColor = greenColor;
+                        // TODO Something
+                        break;
+                    case R.id.PinkButton:
+                        buttonColor = PinkColor;
+                        // TODO Something
+                        break;
+                }
+            }
+        });
+        //intially setting red paint
+        colorChoiceButton.check(R.id.PinkButton);
 
-
-
+*/
 
 
     }
@@ -57,6 +87,7 @@ public class Court extends View {
     @Override
     public void onDraw(Canvas canvas){
         rectangle.draw(canvas); // call rectangle to draw
+
         //circle.draw(canvas);
 
     }

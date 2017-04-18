@@ -12,7 +12,9 @@
         android:id="@+id/courtDraw"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:context=".mainDrawing" />
+        android:layout_above="@+id/brushSizeBar">
+    </com.example.axp141330.drawing.Court>
+        <!--tools:context=".mainDrawing" />-->
 
         <LinearLayout
             android:id="@+id/control_layout"
