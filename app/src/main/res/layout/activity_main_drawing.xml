@@ -5,12 +5,78 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.axp141330.drawing.mainDrawing">
-
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
     <com.example.axp141330.drawing.Court
         android:id="@+id/courtDraw"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        tools:context=".mainDrawing"
-        tools:ignore="MissingConstraints" />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:context=".mainDrawing" />
+
+        <LinearLayout
+            android:id="@+id/control_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true" >
+
+            <RadioGroup
+                android:id="@+id/colorButtons"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="1" >
+
+                <RadioButton
+                    android:id="@+id/OrangeButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.25"
+                    android:text="Orange"
+                    app:buttonTint="@android:color/holo_orange_dark"
+                    android:textColor="@android:color/holo_orange_dark"/>
+
+                <RadioButton
+                    android:id="@+id/PurpleButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.25"
+                    android:text="Purple"
+                    app:buttonTint="@android:color/holo_purple"
+                    android:textColor="@android:color/holo_purple"/>
+
+                <RadioButton
+                    android:id="@+id/GreenButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.25"
+                    android:text="Green"
+                    app:buttonTint="@android:color/holo_green_dark"
+                    android:textColor="@android:color/holo_green_dark"/>
+
+                <RadioButton
+                    android:id="@+id/PinkButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.25"
+                    android:text="Pink"
+                    app:buttonTint="?attr/colorAccent"
+                    android:textColor="?attr/colorAccent"/>
+
+            </RadioGroup>
+
+        </LinearLayout>
+
+        <SeekBar
+            android:id="@+id/brushSizeBar"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_above="@+id/control_layout"
+            android:layout_alignParentStart="true" />
+
+    </RelativeLayout>
+
 
 </android.support.constraint.ConstraintLayout>
