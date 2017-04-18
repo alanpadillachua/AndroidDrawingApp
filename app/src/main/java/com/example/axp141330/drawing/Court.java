@@ -22,12 +22,7 @@ import android.widget.Toast;
 public class Court extends View {
     private ShapeDrawable rectangle;
     private ShapeDrawable circle;
-    private RadioButton orange;
-    private RadioButton purple;
-    private RadioButton pink;
-    private RadioButton green;
     private int buttonColor;
-    private RadioGroup colorChoiceButton;
     private final int OrangeColor = Color.parseColor("#ff9400");
     private final int PurpleColor = Color.parseColor("#a100c1");
     private final int PinkColor = Color.parseColor("#ff0098");
@@ -44,40 +39,6 @@ public class Court extends View {
         rectangle.setBounds(x, y, width, height); // make it be on bottom half of screen
         circle = new ShapeDrawable(new OvalShape());
         circle.setIntrinsicWidth(width);
-
-       /* orange = (RadioButton)findViewById(R.id.OrangeButton); // get orange button
-        purple = (RadioButton)findViewById(R.id.PurpleButton); // get purple button
-        green = (RadioButton)findViewById(R.id.GreenButton); // get green button
-        pink = (RadioButton)findViewById(R.id.PinkButton); // get pink button
-        colorChoiceButton = (RadioGroup) findViewById(R.id.colorButtons);
-        colorChoiceButton.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(RadioGroup group, int checkedId)
-            {
-                switch(checkedId)
-                {
-                    case R.id.OrangeButton:
-                        buttonColor = OrangeColor;
-                        break;
-                    case R.id.PurpleButton:
-                        buttonColor = PurpleColor;
-                        // TODO Something
-                        break;
-                    case R.id.GreenButton:
-                        buttonColor = greenColor;
-                        // TODO Something
-                        break;
-                    case R.id.PinkButton:
-                        buttonColor = PinkColor;
-                        // TODO Something
-                        break;
-                }
-            }
-        });
-        //intially setting red paint
-        colorChoiceButton.check(R.id.PinkButton);
-
-*/
 
 
     }
