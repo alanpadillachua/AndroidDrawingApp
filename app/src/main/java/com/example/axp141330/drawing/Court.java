@@ -23,6 +23,10 @@ public class Court extends View {
     private RadioButton pink;
     private RadioButton green;
     private int buttonColor;
+    private final int OrangeColor = Color.parseColor("#ff9400");
+    private final int PurpleColor = Color.parseColor("#a100c1");
+    private final int PinkColor = Color.parseColor("#ff0098");
+
     public Court(Context context, AttributeSet attr){
         super(context,attr); // call super
         int width = context.getResources().getDisplayMetrics().widthPixels; // get width of screen
