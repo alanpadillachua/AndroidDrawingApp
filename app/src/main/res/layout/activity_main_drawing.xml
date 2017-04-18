@@ -5,23 +5,23 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.axp141330.drawing.mainDrawing">
-
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/mainToolBar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimaryDark"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Dark" />
     <com.example.axp141330.drawing.Court
         android:id="@+id/courtDraw"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:context=".mainDrawing"
-        ></com.example.axp141330.drawing.Court>
+        tools:context=".mainDrawing" />
 
-    <android.support.v7.widget.Toolbar
-        android:id="@+id/toolbar"
-        android:layout_width="383dp"
-        android:layout_height="60dp"
-        android:background="@android:color/white"
-        android:minHeight="60dp"
-        android:theme="?attr/actionBarTheme"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="453dp" />
+    </RelativeLayout>
 
 
 </android.support.constraint.ConstraintLayout>
