@@ -4,16 +4,19 @@ import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.drawable.ShapeDrawable;
+import android.graphics.drawable.shapes.OvalShape;
 import android.graphics.drawable.shapes.RectShape;
 import android.util.AttributeSet;
+import android.view.MotionEvent;
 import android.view.View;
 
 /**
  * Created by Alan Padilla on 4/6/2017.
  */
 
-public class Court extends View {
+public class Court extends View implements View.OnTouchListener{
     private ShapeDrawable rectangle;
+    private ShapeDrawable circle;
     public Court(Context context, AttributeSet attr){
         super(context,attr); // call super
         int width = context.getResources().getDisplayMetrics().widthPixels; // get width of screen
@@ -23,11 +26,19 @@ public class Court extends View {
         rectangle = new ShapeDrawable(new RectShape()); // initialize a rectangle
         rectangle.getPaint().setColor(Color.GRAY); // set the color
         rectangle.setBounds(x, y, width, height); // make it be on bottom half of screen
+
+        circle = new ShapeDrawable(new OvalShape());
+        circle.getPaint().setColor(Color.BLUE);
+    }
+    @Override
+    public boolean onTouch(View view, MotionEvent event){
+        return true;
     }
 
 
     @Override
     public void onDraw(Canvas canvas){
         rectangle.draw(canvas); // call rectangle to draw
+        circle.draw(canvas); // draw circle
     }
 }
